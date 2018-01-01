@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>{% block title %}{% endblock %} | CBox</title>
+        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css"/>
+        {% block extra_styles %} {% endblock %}
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+        {% block extra_scripts %} {% endblock %}
+    </head>
+    <body>
+        <div class="navbar navbar-default" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-menu" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">CBox</a>
+            </div>
+            <div id="nav-menu" class="navbar-right navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="#">Homepage</a></li>
+                    <li><a href="#">Search</a></li>
+                    <li><a href="#">Collections</a></li>
+                    <li><a href="#">Import</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <hr />
+                <footer>
+                    <p>&copy; crab2313 crab2313@gmail.com</p>
+                </footer>
+            </dev>
+        </div>
+    </body>
+</html>
