@@ -1,0 +1,20 @@
+{% macro comic_item(title, image) %}
+    <div>{{ title }}</div>
+    <div>
+        <img src="{{image}}"/>
+    </div>
+    <div>
+        <a href="#">With link</a>
+    </div>
+{% endmacro %}
+
+{% macro comic_item_row(items) %}
+    <div class="row">
+        <div class="col-md-1"></div>
+        {% for i in items %}
+            <div class="col-md-2">
+                {{ comic_item(i.title, i.image) }}
+            </div>
+        {% endfor %}
+    </div>
+{% endmacro %}

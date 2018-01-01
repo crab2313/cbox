@@ -3,10 +3,10 @@
     <head>
         <meta charset="utf-8"/>
         <title>{% block title %}{% endblock %} | CBox</title>
-        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}"/>
         {% block extra_styles %} {% endblock %}
-        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-        <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+        <script src="{{ url_for('static', filename='js/jquery-3.2.1.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
         {% block extra_scripts %} {% endblock %}
     </head>
     <body>
@@ -23,15 +23,15 @@
             </div>
             <div id="nav-menu" class="navbar-right navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="#">Homepage</a></li>
-                    <li><a href="#">Search</a></li>
-                    <li><a href="#">Collections</a></li>
-                    <li><a href="#">Import</a></li>
-                    <li><a href="#">About</a></li>
+                    <li><a href="/">Homepage</a></li>
+                    <li><a href="/search">Search</a></li>
+                    <li><a href="/collections">Collections</a></li>
+                    <li><a href="/import">Import</a></li>
+                    <li><a href="/about">About</a></li>
                 </ul>
             </div>
         </div>
-
+        {% block content %}{% endblock %}
         <div class="container">
             <div class="row">
                 <hr />
