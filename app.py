@@ -7,7 +7,6 @@ from flask_script import Manager
 from flask_migrate import Migrate, MigrateCommand
 from flask_bootstrap import Bootstrap
 
-
 app = Flask(__name__)
 app.config.from_object(Configuration)
 db = SQLAlchemy(app)
