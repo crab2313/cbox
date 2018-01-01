@@ -5,7 +5,7 @@ from forms import UploadComicForm
 
 @app.route('/')
 def homepage():
-    return render_template('homepage.html')
+    return redirect('/items')
 
 @app.route('/about')
 def about():

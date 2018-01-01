@@ -1,1 +1,12 @@
 {% extends "base.html" %}
+{% from "macros/comic_item.html" import comic_item_row %}
+
+
+{% block title %}Home{% endblock %}
+
+
+{% block content %}
+    {% for item in items|batch(5) %}
+        {{ comic_item_row(item) }}
+    {% endfor %}
+{% endblock%}
